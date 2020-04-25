@@ -18,4 +18,7 @@ Run the following commands to play breakout:
 `python play_breakout`
 
 ## Game Screenshots
+![Welcome Screen](https://github.com/mgibbs1259/breakout/blob/master/game_screenshots/welcome_screen.png)
+![Game Screen](https://github.com/mgibbs1259/breakout/blob/master/game_screenshots/game_screen.png)
+
 

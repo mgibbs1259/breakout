@@ -1,6 +1,8 @@
 # __main__.py
 # Walker M. White (wmw2)
 # November 12, 2012
+
+
 """__main__ module for Breakout
 
 This is the module with the script code to start up the App.  Make
@@ -19,8 +21,11 @@ In addition, you should have the following subfolders
 Moving any of these folders or files will prevent the game from 
 working properly. You are free to add new files into these 
 folders as you wish."""
+
+
 from constants import *
 from controller import *
+
 
 # Application code
 if __name__ == '__main__':

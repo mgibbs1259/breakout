@@ -145,7 +145,6 @@ class Breakout(Game):
         self.winscreen = GImage(source = WINSCREEN_SOURCE, width = GAME_WIDTH,
         height = GAME_HEIGHT, center_x = GAME_WIDTH/2, center_y = GAME_HEIGHT/2)
 
-
     def update(self,dt):
 	"""Animate a single frame in the game. It is the method that does most
         of the work. Of course, it should rely on helper methods in order to
@@ -226,7 +225,6 @@ class Breakout(Game):
         if self.state == STATE_COMPLETE:
             self.previoustouch = self.view.touch
 
-
     def draw(self):
 	"""Draws the game objects to the view. Every single thing you want to
         draw in this game is a GObject. To draw a GObject g, simply use the
@@ -273,7 +271,6 @@ class Breakout(Game):
         if self.state == STATE_ACTIVE:
             self.bricksmessage = self.model.bricksmessage
 
-
     def movepaddle(self):
 	"""Moves the paddle."""
         if self.previoustouch == None and self.view.touch != None:
@@ -293,4 +290,4 @@ class Breakout(Game):
             self.model.paddle.x = 0
         
 	if self.model.paddle.x + PADDLE_WIDTH > GAME_WIDTH:
-        self.model.paddle.x = GAME_WIDTH - PADDLE_WIDTH
+	    self.model.paddle.x = GAME_WIDTH - PADDLE_WIDTH

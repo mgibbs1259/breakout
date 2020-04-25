@@ -226,7 +226,6 @@ class Ball(GImage):
 
     def moveball(self):
 	"""Moves the ball."""
-
         movex = self.center_x + self.vx
         movey = self.center_y + self.vy
 

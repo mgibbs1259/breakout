@@ -87,15 +87,13 @@ class Breakout(Game):
         winscreen: The win screen image displayed after all of the bricks have
         been destroyed during a game. [GImage]."""
 
-
     def init(self):
-	"""Initialize the game state. This method is distinct from the built-in
+	    """Initialize the game state. This method is distinct from the built-in
         initializer __init__. This method is called once the game is running.
         You should use it to initialize any game specific attributes. This
         method should initialize any state attributes as necessary to satisfy
         invariants. When done, set the state to STATE_INACTIVE, and create a
         message saying that the user should press to play a game."""
-
         self.bricksmessage = None
 
         self.bricksmessagetime = 0
@@ -149,7 +147,7 @@ class Breakout(Game):
 
 
     def update(self,dt):
-	"""Animate a single frame in the game. It is the method that does most
+	    """Animate a single frame in the game. It is the method that does most
         of the work. Of course, it should rely on helper methods in order to
         keep the method short and easy to read. Some of the helper methods
         belong in this class, and others belong in class Model. The first thing
@@ -184,7 +182,6 @@ class Breakout(Game):
         Precondition: dt is the time since last update (a float). This
         parameter can be safely ignored most of the time. It is only
         relevant for debugging if your game is running really slowly."""
-            
         if self.state == STATE_INACTIVE and self.view.touch != None:
             newmodel = Model()
             self.model = newmodel
@@ -231,13 +228,12 @@ class Breakout(Game):
 
 
     def draw(self):
-	"""Draws the game objects to the view. Every single thing you want to
+	    """Draws the game objects to the view. Every single thing you want to
         draw in this game is a GObject. To draw a GObject g, simply use the
         method g.draw(view). It is that easy! Many of the GObjects, such as the
         paddle, ball, and bricks, are attributes in Model. In order to draw
         them, you either need to add getters for these attributes or you need to
         add a draw method to class Model. Which one you do is up to you."""
-
         if self.state == STATE_INACTIVE:
             self.welcomescreen.draw(self.view)
             self.welcomemessage.draw(self.view)
@@ -279,8 +275,7 @@ class Breakout(Game):
 
 
     def movepaddle(self):
-	"""Moves the paddle."""
-
+	    """Moves the paddle."""
         if self.previoustouch == None and self.view.touch != None:
             self.previoustouch = self.view.touch
             return
@@ -297,5 +292,5 @@ class Breakout(Game):
         if self.model.paddle.x < 0:
             self.model.paddle.x = 0
         
-	if self.model.paddle.x + PADDLE_WIDTH > GAME_WIDTH:
+	    if self.model.paddle.x + PADDLE_WIDTH > GAME_WIDTH:
             self.model.paddle.x = GAME_WIDTH - PADDLE_WIDTH

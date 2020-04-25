@@ -47,7 +47,6 @@ class Model(object):
         scorecounter: The display of the current score during a game.
         [GLabel]."""
 
-
     def __init__(self):
         self.background = GImage(source = BACKGROUND_SOURCE, width = GAME_WIDTH,
         height = GAME_HEIGHT, center_x = GAME_WIDTH/2, center_y = GAME_HEIGHT/2)
@@ -82,7 +81,6 @@ class Model(object):
     def createbricks(self):
         """Creates the bricks that will be utilized during a game. Returns a
         list of GRectangle."""
-
         bricks = [ ]
         for columnnumber in range(0, BRICKS_IN_ROW):
             colorlist = BRICK_COLORS[1:]
@@ -107,7 +105,6 @@ class Model(object):
 
     def createball(self):
         """Creates the ball that will be utilized during a game."""
-
         self.ball = Ball()
 
 
@@ -117,7 +114,6 @@ class Model(object):
         collides with either the brick or the paddle, it stops checking
         immediately, and returns the object involved in the collision.
         It returns None if no collision occurred."""
-
         # For the (x, y) coordinate.
         if self.paddle.contains(self.ball.center_x - RADIUS,
         self.ball.center_y - RADIUS):
@@ -160,7 +156,6 @@ class Model(object):
     def collisionconsequnce(self):
         """Changes the velocity of the ball based on what it has collided
         with during a game. Updates bricksmessage and scorecounter."""
-
         if ((self.collision() == self.paddle) and (self.ball.center_x + RADIUS <
         self.paddle.center_x - PADDLE_WIDTH/4.0) and (self.ball.vy < 0) or
         (self.collision() == self.paddle) and (self.ball.center_x - RADIUS >
@@ -193,7 +188,6 @@ class Model(object):
         """The ball disappears if it collides with the bottom of the screen
         during a game. Updates livescounter. Returns True if the ball disappears
         if it collides with the bottom of the screen during a game."""
-
         movey = self.ball.center_y + self.ball.vy
         if movey + RADIUS <= 0:
             self.ball = None
@@ -221,7 +215,6 @@ class Ball(GImage):
     does not have to be a GEllipse. It could be an instance of GImage (Why?).
     This change is allowed, but then you will have to modify the class header up
     above."""
-
 
     def __init__(self):
         GImage.__init__(self, source = BALL_SOURCE, width = BALL_DIAMETER,

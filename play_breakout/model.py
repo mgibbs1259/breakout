@@ -47,7 +47,6 @@ class Model(object):
         scorecounter: The display of the current score during a game.
         [GLabel]."""
 
-
     def __init__(self):
         self.background = GImage(source = BACKGROUND_SOURCE, width = GAME_WIDTH,
         height = GAME_HEIGHT, center_x = GAME_WIDTH/2, center_y = GAME_HEIGHT/2)
@@ -78,7 +77,6 @@ class Model(object):
         linecolor = COUNTER_LINECOLOR, x = 15, y = COUNTER_Y, halign = 'left',
         valign = 'middle')
 
-
     def createbricks(self):
         """Creates the bricks that will be utilized during a game. Returns a
         list of GRectangle."""
@@ -103,11 +101,9 @@ class Model(object):
                     colorlist = BRICK_COLORS[:]
         return bricks
 
-
     def createball(self):
         """Creates the ball that will be utilized during a game."""
         self.ball = Ball()
-
 
     def collision(self):
         """Returns GObject that has collided with the ball. This method checks
@@ -153,7 +149,6 @@ class Model(object):
 
         return None
 
-
     def collisionconsequnce(self):
         """Changes the velocity of the ball based on what it has collided
         with during a game. Updates bricksmessage and scorecounter."""
@@ -183,7 +178,6 @@ class Model(object):
             linecolor = COUNTER_LINECOLOR,  x = 15, y = COUNTER_Y,
             halign = 'left', valign = 'middle')
             self.ball.vy = -self.ball.vy
-
 
     def loseball(self):
         """The ball disappears if it collides with the bottom of the screen

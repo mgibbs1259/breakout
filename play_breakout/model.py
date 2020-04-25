@@ -47,6 +47,7 @@ class Model(object):
         scorecounter: The display of the current score during a game.
         [GLabel]."""
 
+
     def __init__(self):
         self.background = GImage(source = BACKGROUND_SOURCE, width = GAME_WIDTH,
         height = GAME_HEIGHT, center_x = GAME_WIDTH/2, center_y = GAME_HEIGHT/2)

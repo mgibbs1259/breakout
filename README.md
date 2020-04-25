@@ -6,6 +6,8 @@ Create and activate a Python 2.7 virtual environment:
 
 `virtualenv venv --python=python2.7`
 
+`source venv/bin/activate`
+
 `pip install -r requirements.txt`
 
 ## Usage 

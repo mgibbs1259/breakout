@@ -18,7 +18,7 @@ Run the following commands to play breakout:
 `python play_breakout`
 
 ## Game Screenshots
-<img src="https://github.com/mgibbs1259/breakout/blob/master/game_screenshots/welcome_screen.png" width="300"> <img src="https://github.com/mgibbs1259/breakout/blob/master/game_screenshots/game_screen.png" width="300">
+<img src="https://github.com/mgibbs1259/breakout/blob/master/game_screenshots/welcome_screen.png" width="300" height="500"> <img src="https://github.com/mgibbs1259/breakout/blob/master/game_screenshots/game_screen.png" width="300" height="500">
 
 
 

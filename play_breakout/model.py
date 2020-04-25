@@ -17,8 +17,6 @@ import random
 
 
 class Model(object):
-
-
     """An instance is a single game of Breakout. The model keeps track of the
     state of the game. It tracks the location of the ball, paddle, and bricks.
     It determines whether the player has won or lost the game.
@@ -51,7 +49,6 @@ class Model(object):
 
 
     def __init__(self):
-
         self.background = GImage(source = BACKGROUND_SOURCE, width = GAME_WIDTH,
         height = GAME_HEIGHT, center_x = GAME_WIDTH/2, center_y = GAME_HEIGHT/2)
 
@@ -83,7 +80,6 @@ class Model(object):
 
 
     def createbricks(self):
-
         """Creates the bricks that will be utilized during a game. Returns a
         list of GRectangle."""
 
@@ -110,14 +106,12 @@ class Model(object):
 
 
     def createball(self):
-
         """Creates the ball that will be utilized during a game."""
 
         self.ball = Ball()
 
 
     def collision(self):
-
         """Returns GObject that has collided with the ball. This method checks
         the four corners of the ball, one at a time. If one of these points
         collides with either the brick or the paddle, it stops checking
@@ -164,7 +158,6 @@ class Model(object):
 
 
     def collisionconsequnce(self):
-
         """Changes the velocity of the ball based on what it has collided
         with during a game. Updates bricksmessage and scorecounter."""
 
@@ -197,7 +190,6 @@ class Model(object):
 
 
     def loseball(self):
-
         """The ball disappears if it collides with the bottom of the screen
         during a game. Updates livescounter. Returns True if the ball disappears
         if it collides with the bottom of the screen during a game."""
@@ -214,8 +206,6 @@ class Model(object):
 
 
 class Ball(GImage):
-
-
     """Instance is a ball. We extend GImage because a ball needs attributes for
     velocity. This subclass adds these two attributes.
 
@@ -234,7 +224,6 @@ class Ball(GImage):
 
 
     def __init__(self):
-
         GImage.__init__(self, source = BALL_SOURCE, width = BALL_DIAMETER,
         height = BALL_DIAMETER, center_x = GAME_WIDTH/2,
         center_y = GAME_HEIGHT/2)
@@ -243,8 +232,7 @@ class Ball(GImage):
         self.vy = -5.0
 
     def moveball(self):
-
-        """Moves the ball."""
+	"""Moves the ball."""
 
         movex = self.center_x + self.vx
         movey = self.center_y + self.vy

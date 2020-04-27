@@ -128,5 +128,5 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-/play_breakout/.DS_Store
+play_breakout/.DS_Store
 
